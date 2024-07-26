@@ -1,9 +1,32 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 
 function App() {
+  useEffect(() => {
+    const handleMouseMove = (event) => {
+      const bubbles = document.querySelectorAll('.bubble');
+      bubbles.forEach((bubble) => {
+        const x = event.clientX;
+        const y = event.clientY;
+        bubble.style.left = `${x}px`;
+        bubble.style.top = `${y}px`;
+      });
+    };
+
+    document.addEventListener('mousemove', handleMouseMove);
+
+    return () => {
+      document.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
+
   return (
-    <div>
+    <div className="animated-background">
+      <div className="bubble-container">
+        <div className="bubble"></div>
+        <div className="bubble"></div>
+        <div className="bubble"></div>
+      </div>
       <div className="header">
         <nav>
           <img className="logo" src="./Assets/logo.png" alt="logo" />
