@@ -1,13 +1,28 @@
 import React from 'react';
-import './App.css'; // Importa el archivo CSS correctamente
+import './App.css';
 
 function App() {
   return (
-    <ul className="menu menu-horizontal bg-base-200">
-      <li><a className="menu-item">Item 1</a></li>
-      <li><a className="menu-item">Item 2</a></li>
-      <li><a className="menu-item">Item 3</a></li>
-    </ul>
+    <div>
+      <div className="header">
+        <nav>
+          <img className="logo" src="./Assets/logo.png" alt="logo" />
+          <div>
+            <button className="sign-in-button">Sign In</button>
+          </div>
+        </nav>
+
+        <div className="header-content">
+          <h1>Unlimited POPCORN, TV shows and more.</h1>
+          <h3>Watch anywhere. Cancel anytime.</h3>
+          <p>Ready to watch? Enter your email to create or restart your membership.</p>
+        </div>
+        
+        <div className="button-container">
+          <button className="large-button">Get Started</button>
+        </div>
+      </div>
+    </div>
   );
 }
 
