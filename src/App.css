@@ -4,5 +4,8 @@
   
   .menu-item:hover {
     color: red; /* Cambia el color del texto a rojo cuando se pasa el ratón por encima */
+    box-shadow: 0 4px 8px rgba(144, 238, 144, 0.6);
+    
   }
+  
   
