@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import Root from "./routes/Root"
-import App from "./App"
+import App from "./routes/App"
 import './index.css'
 
 
