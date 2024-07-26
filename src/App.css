@@ -1,0 +1,8 @@
+.menu-item {
+    color: blue; /* Cambia el color del texto a azul */
+  }
+  
+  .menu-item:hover {
+    color: red; /* Cambia el color del texto a rojo cuando se pasa el ratón por encima */
+  }
+  

@@ -11,13 +11,12 @@ function Root() {
    }, [])
    return (
       <>
-         <div className="flex justify-center py-2">
-            <ul className="menu menu-vertical lg:menu-horizontal bg-base-200 rounded-box">
-               <li><a>Item 1</a></li>
-               <li><a>Item 2</a></li>
-               <li><a>Item 3</a></li>
-            </ul>
-         </div>
+      <ul className="menu menu-horizontal bg-base-200">
+  <li><a>Item 1</a></li>
+  <li><a>Item 2</a></li>
+  <li><a>Item 5</a></li>
+</ul>
+
          <div className="container mx-auto py-1">
             <Outlet />
          </div>
