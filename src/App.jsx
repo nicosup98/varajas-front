@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import './App.css';
+import audioFile from './assets/musica.mp3'; // Asegúrate de que la ruta sea correcta
 
 function App() {
   useEffect(() => {
@@ -15,6 +16,10 @@ function App() {
 
     document.addEventListener('mousemove', handleMouseMove);
 
+    // Reproducir el audio cuando el componente se monte
+    const audio = new Audio(audioFile);
+    audio.play();
+
     return () => {
       document.removeEventListener('mousemove', handleMouseMove);
     };
@@ -29,7 +34,7 @@ function App() {
       </div>
       <div className="header">
         <nav>
-          <img className="logo" src="./Assets/logo.png" alt="logo" />
+          <img className="logo" src="./assets/logo.png" alt="logo" />
           <div>
             <button className="sign-in-button">Sign In</button>
           </div>
