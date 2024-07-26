@@ -1,16 +1,14 @@
-
-
+import React from 'react';
+import './App.css'; // Importa el archivo CSS correctamente
 
 function App() {
-
   return (
-    <>
-    <div className="flex justify-center">
-      <h1>varajitas xd</h1>
-    </div>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet et temporibus saepe magni vel sed cumque vitae, nulla obcaecati mollitia suscipit sunt ipsum voluptatem. Dicta omnis minima dolorum quis ducimus!</p>
-    </>
-  )
+    <ul className="menu menu-horizontal bg-base-200">
+      <li><a className="menu-item">Item 1</a></li>
+      <li><a className="menu-item">Item 2</a></li>
+      <li><a className="menu-item">Item 3</a></li>
+    </ul>
+  );
 }
 
-export default App
+export default App;
