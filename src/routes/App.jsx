@@ -42,7 +42,7 @@ function App() {
 
         <div className="header-content">
           <h1>Unlimited POPCORN, TV shows and more.</h1>
-          <h3>Watch anywhere. Cancel anytime.</h3>
+         
           <p>Ready to watch? Enter your email to create or restart your membership.</p>
         </div>
         
