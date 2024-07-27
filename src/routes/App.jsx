@@ -34,7 +34,7 @@ function App() {
       </div>
       <div className="header">
         <nav>
-          <img className="logo" src="./assets/logo.png" alt="logo" />
+          <img className="logo" src=".\src\css\logo_barajas (1).png" alt="logo" />
           <div>
             <button className="sign-in-button">Sign In</button>
           </div>
@@ -50,8 +50,27 @@ function App() {
           <button className="large-button">Get Started</button>
         </div>
       </div>
+
+      
+      <div className="area">
+        <ul className="circles">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
     </div>
   );
 }
+
+
+  
 
 export default App;
