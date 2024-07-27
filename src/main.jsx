@@ -7,6 +7,7 @@ import './index.css'
 
 import {
   createBrowserRouter,
+  json,
   RouterProvider,
 } from "react-router-dom";
 import Varajas from './routes/Varajas'

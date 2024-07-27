@@ -186,3 +186,19 @@
     -webkit-transform: translateY(0%);
   }
 }
+
+.varaja-entrance {
+  animation: entrance .7s forwards;
+}
+
+@keyframes entrance {
+  0% {
+      transform: scale(0.1);
+      opacity: .4;
+  }
+
+  100%{
+    transform: scale(1);
+    opacity: 1;
+  }
+}
