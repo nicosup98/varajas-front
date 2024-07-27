@@ -17,7 +17,7 @@ const router = createBrowserRouter([
     path: "/",
     element: <Root />,
     //bypass temporal para probar las cartas
-    //loader: async () => login(),
+    loader: async () => login(),
     children: [
       {
         path :"home",

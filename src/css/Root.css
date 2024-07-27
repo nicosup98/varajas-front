@@ -1,0 +1,31 @@
+.background-animation {
+   background: linear-gradient(270deg, #ff00ff, #00ff00, #0000ff); /* Reemplazado el color rojo (#ff0000) por magenta (#ff00ff) */
+   background-size: 600% 600%;
+   animation: BackgroundAnimation 30s ease infinite; /* Duración aumentada a 30s */
+   color: #fff;
+ }
+
+
+@keyframes pulse {
+   0% {
+     transform: scale(1);
+   }
+   50% {
+     transform: scale(1.1);
+   }
+   100% {
+     transform: scale(1); 
+   }
+ } 
+
+ @keyframes BackgroundAnimation {
+   0% {
+     background-position: 0% 50%;
+   }
+   50% {
+     background-position: 100% 50%;
+   }
+   100% {
+     background-position: 0% 50%;
+   }
+ }

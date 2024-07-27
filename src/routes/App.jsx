@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import '../css/App.css';
-import audioFile from '../assets/musica.mp3'; // Asegúrate de que la ruta sea correcta
+import audioFile from '../assets/musica2.mp3'; // Asegúrate de que la ruta sea correcta
 
 function App() {
   useEffect(() => {

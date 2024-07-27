@@ -1,6 +1,6 @@
 import { useEffect } from "react"
 import { Outlet, useLoaderData, useNavigate } from "react-router-dom"
-
+import "../css/Root.css"
 
 
 function Root() {
@@ -13,8 +13,10 @@ function Root() {
    }, [])
    return (
       <>
-         <div className="container mx-auto py-1">
-            <Outlet />
+         <div className="background-animation">
+            <div className="container mx-auto py-1 ">
+               <Outlet />
+            </div>
          </div>
       </>
    )
