@@ -1,18 +1,19 @@
-import { useState } from "react"
+
 import "../css/Varaja.css"
 function Varaja(props) {
 
    const specialBorder = props.imagen.endsWith(".gif") ? "gradient-border" : "border-2 border-teal-600"
+   const pokemonBg = props.tipo === "pokemon" ? "bg-white rounded-md": ""
 
    return (
       <>
          <div className=" h-[500px] flip-card my-1 varaja-entrance">
             <div className="flip-card-inner">
-               <div className="flip-card-back ">
+               <div className={`flip-card-back ${pokemonBg}`}>
                   <img className="h-[500px] rounded-md" src={props.imagen} alt="" />
                </div>
                <div className={`bg-base-300 h-full w-full flip-card-front rounded-md backwrap gradient ${specialBorder}`}>
-                  <h1 className="text-teal-200 bg-teal-900 text-center p-2 m-1 rounded-md">{props.nombre}</h1>
+                  <h1 className="text-teal-200 bg-teal-900 text-center p-2 m-1 rounded-sm">{props.nombre}</h1>
                   <div className="back-shapes w-full">
                      <span className="floating circle" style={{ top: "66.59856996935649%", left: "53.020833333333334%", animationDelay: "-0.9s" }}></span>
                      <span className="floating triangle" style={{ top: "top:31.46067415730337%", left: "43.59375%", animationDelay: "-4.8s" }}></span>
