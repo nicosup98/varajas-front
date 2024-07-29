@@ -1,40 +1,45 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import Root from "./routes/Root"
-import App from "./routes/App"
-import './index.css'
+import React from "react"
+import ReactDOM from "react-dom/client"
+import Root from "./routes/root"
+import App from "./App"
+import Login from "./pages/Login"
+import Signup from "./pages/Signup"
+import Varajas from "./routes/Varajas"
+import { getVaraja } from "../utils/fetchVaraja"
+import "./index.css"
+import "./axiosConfig"
+import "./index.css"
 
-
-import {
-  createBrowserRouter,
-  json,
-  RouterProvider,
-} from "react-router-dom";
-import Varajas from './routes/Varajas'
-import { getVaraja, login } from '../utils/fetchVaraja'
+import { createBrowserRouter, RouterProvider } from "react-router-dom"
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
-    //bypass temporal para probar las cartas
-    loader: async () => login(),
     children: [
       {
-        path :"home",
-        element: <App />
+        path: "home",
+        element: <App />,
+      },
+      {
+        path: "login",
+        element: <Login />,
+      },
+      {
+        path: "signup",
+        element: <Signup />,
       },
       {
         path: "varajas/:tipo",
         element: <Varajas />,
-        loader: async ({params}) => getVaraja(params.tipo)
-      }
-    ]
+        loader: async ({ params }) => getVaraja(params.tipo),
+      },
+    ],
   },
-]);
+])
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <RouterProvider router={router} />
-  </React.StrictMode>,
+  </React.StrictMode>
 )
