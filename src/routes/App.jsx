@@ -43,12 +43,29 @@ function App() {
         <div className="header-content">
           <h1>BARAJAS EL UNIVERSO DE LAS CARTAS</h1>
          
-          <p>El universo de las barajitas a un clic</p>
+          <p>Elige una opcion:</p>
         </div>
         
         <div className="button-container">
-          <button className="large-button">Haz clic aquí</button>
-        </div>
+
+              <div class="large-button" id="game1">
+                <h2>Perro</h2>
+              </div>
+              <div class="large-button" id="game2">
+                <h2>Pato</h2>
+              </div>
+              <div class="large-button" id="game3">
+                <h2>Pokemon</h2>
+              </div>
+              <div class="large-button" id="game4">
+                <h2>Anime</h2>
+              </div>
+              <div class="large-button" id="game5">
+                <h2>Rick and Morty</h2>
+              </div>
+    
+        <script src="script.js"></script>
+      </div>
       </div>
 
       

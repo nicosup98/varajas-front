@@ -205,6 +205,10 @@ nav button {
   max-width: 650px;
 }
 
+.header-content p{
+  margin-top: 40px;
+}
+
 .header-content h3 {
   font-weight: 400;
   margin-bottom: 20px;
@@ -255,12 +259,13 @@ nav button {
 .button-container {
   display: flex;
   justify-content: center;
-  margin-top: 250px; /* Aumenta este valor para mover el botón más abajo */
+  margin-top: 200px; /* Aumenta este valor para mover el botón más abajo */
 }
 
 .large-button {
-  padding: 20px 35px; /* Increase the padding to make the button slightly larger */
+  padding: 110px 60px; /* Increase the padding to make the button slightly larger */
   font-size: 18px;
+  margin: 0px 20px;
   background-color: #ff0000; /* Cambia el color según tus necesidades */
   color: white;
   border: none;
