@@ -32,10 +32,9 @@ function Login() {
       const response = await axios.post("/login", {
         username,
         password,
-        confirmPassword: password,
       })
 
-      localStorage.setItem("user", JSON.stringify(response.data.user))
+      sessionStorage.setItem("user", JSON.stringify(response.data.user))
       navigate("/home")
     } catch (e) {
       alert(e.message)

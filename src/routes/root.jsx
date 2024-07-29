@@ -3,11 +3,13 @@ import { Outlet, useNavigate } from "react-router-dom"
 import "../css/Root.css"
 
 function Root() {
-  const user = localStorage.getItem("user")
+  const user = sessionStorage.getItem("user")
   const navigate = useNavigate()
   useEffect(() => {
     //aqui va la validacion del usuario si esta logueado o no, redirige a home o a login
-    if (!user) navigate("/login")
+    if (!user) {
+      navigate("/login")
+    }
   }, [])
   return (
     <>
