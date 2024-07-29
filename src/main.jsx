@@ -4,8 +4,11 @@ import Root from "./routes/root"
 import App from "./App"
 import Login from "./pages/Login"
 import Signup from "./pages/Signup"
+import Varajas from "./routes/Varajas"
+import { getVaraja } from "../utils/fetchVaraja"
 import "./index.css"
 import "./axiosConfig"
+import "./index.css"
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 
@@ -25,6 +28,11 @@ const router = createBrowserRouter([
       {
         path: "signup",
         element: <Signup />,
+      },
+      {
+        path: "varajas/:tipo",
+        element: <Varajas />,
+        loader: async ({ params }) => getVaraja(params.tipo),
       },
     ],
   },
