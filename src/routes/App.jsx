@@ -36,18 +36,18 @@ function App() {
         <nav>
           <img className="logo" src=".\src\css\logo_barajas (1).png" alt="logo" />
           <div>
-            <button className="sign-in-button">Sign In</button>
+            <button className="sign-in-button">Salir</button>
           </div>
         </nav>
 
         <div className="header-content">
-          <h1>Unlimited POPCORN, TV shows and more.</h1>
+          <h1>BARAJAS EL UNIVERSO DE LAS CARTAS</h1>
          
-          <p>Ready to watch? Enter your email to create or restart your membership.</p>
+          <p>El universo de las barajitas a un clic</p>
         </div>
         
         <div className="button-container">
-          <button className="large-button">Get Started</button>
+          <button className="large-button">Haz clic aquí</button>
         </div>
       </div>
 
