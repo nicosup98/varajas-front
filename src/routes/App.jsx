@@ -49,19 +49,14 @@ function App() {
         <div className="button-container">
 
               <div class="large-button" id="game1">
-                <h2>Perro</h2>
               </div>
               <div class="large-button" id="game2">
-                <h2>Pato</h2>
               </div>
               <div class="large-button" id="game3">
-                <h2>Pokemon</h2>
               </div>
               <div class="large-button" id="game4">
-                <h2>Anime</h2>
               </div>
               <div class="large-button" id="game5">
-                <h2>Rick and Morty</h2>
               </div>
     
         <script src="script.js"></script>

@@ -256,14 +256,48 @@ nav button {
   max-width: 650px;
 }
 
+#game1{
+  background-image: url(https://i.pinimg.com/originals/22/bd/ab/22bdabba91b9772d5059fa4e55e36ecf.jpg);
+  background-size: cover;
+  height: 300px;
+}
+
+#game2{
+  background-image: url(https://is.zobj.net/image-server/v1/images?r=Xlf7PMdmUIgQqyqlYI3M4afId9bIbZw272BvoXfyR8p3Hz7bV-AnIqO0gm-SnYsQ32X6E3bTYC2qcRW78yRdnL03o_4lfMFnrYWn2_maZMO40P3MDEXnmI9IzKPdxPZ0EtFKQHB_IqzklPDXhA2KyQN2wK_FazUFl2jrvsJ-MzBa_g9itbcyZfZDCe8yE2BkRQLqMfaYiUEIC79f0JC3D5thOLfepTSF1OUm9qkGvqiISq5E_LbmWrCv1Pw);
+  background-size: cover;
+  height: 300px;
+}
+
+#game3{
+  background-image: url(https://mrwallpaper.com/images/thumbnail/illuminated-poke-ball-pokemon-iphone-aidw21v1d13ujypw.jpg);
+  background-size: cover;
+  height: 300px;
+}
+
+#game4{
+  background-image: url(https://i.pinimg.com/736x/bb/cf/36/bbcf36421fed2b7f2d5bdf10b6420428.jpg);
+  background-size: cover;
+  height: 300px;
+}
+
+#game5{
+  background-image: url(https://wallpapers.com/images/featured/rick-and-morty-8rc57d4ds44gqzau.jpg);
+  background-size: cover;
+  height: 300px;
+}
+
 .button-container {
   display: flex;
   justify-content: center;
   margin-top: 200px; /* Aumenta este valor para mover el botón más abajo */
 }
 
+.button-container h2{
+  font-size: 17px;
+}
+
 .large-button {
-  padding: 110px 60px; /* Increase the padding to make the button slightly larger */
+  padding: 110px 90px; /* Increase the padding to make the button slightly larger */
   font-size: 18px;
   margin: 0px 20px;
   background-color: #ff0000; /* Cambia el color según tus necesidades */
