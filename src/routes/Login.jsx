@@ -4,6 +4,7 @@ import { useAuth } from "../hooks/useAuth"
 import AuthLayout from "../components/AuthLayout"
 import { Link, useNavigate } from "react-router-dom"
 import Input from "../components/Input"
+import { useEffect } from "react"
 
 const formFields = [
   {
@@ -41,6 +42,13 @@ function Login() {
       alert(e.message)
     }
   }
+
+  useEffect(()=>{
+    const user = sessionStorage.getItem("user")
+    if(!!user){
+      navigate("/home")
+    }
+  }, [])
   return (
     <AuthLayout title="Login">
       <form

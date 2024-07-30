@@ -19,7 +19,7 @@ function Root() {
   }, [])
   return (
     <>
-      <div className="background-animation">
+      <div className="background-animation h-[100vh] overflow-y-scroll">
         <div className="container mx-auto py-1">
           <div className="navbar  bg-gradient-to-r from-cyan-700 to-[#113243] rounded-md">
             <div className="flex-none">

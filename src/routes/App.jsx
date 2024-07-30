@@ -1,41 +1,26 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import '../css/App.css'; 
 import { Link } from "react-router-dom";
 function App() {
-  useEffect(() => {
-    const handleMouseMove = (event) => {
-      const bubbles = document.querySelectorAll('.bubble');
-      bubbles.forEach((bubble) => {
-        const x = event.clientX;
-        const y = event.clientY;
-        bubble.style.left = `${x}px`;
-        bubble.style.top = `${y}px`;
-      });
-    };
+  const [loading,setLoading] = useState(false)
 
-    document.addEventListener('mousemove', handleMouseMove);
+  const cursorStyle = useMemo(()=>loading? "cursor-progress": "cursor-pointer",[loading])
 
-    // Reproducir el audio cuando el componente se monte
-    //esta dando error
-    // const audio = new Audio(audioFile);
-    // audio.play();
-
-    return () => {
-      document.removeEventListener('mousemove', handleMouseMove);
-    };
-  }, []);
-
+  function handleLoading() {
+    setLoading(true)
+  }
   return (
- <div className="button-container h-[100vh]">
-      <Link to="/varajas/perro" className="large-button cursor-pointer" id="game1">
+    <div className={"flex flex-col xl:flex-row my-2 xl:my-0 justify-around items-center h-[80vh] gap-3 overflow-y-auto over " + cursorStyle}>
+
+      <Link to="/barajas/perro" className="large-button cursor-pointer" id="game1" onClick={handleLoading}>
       </Link>
-      <Link to="/varajas/pato" className="large-button cursor-pointer" id="game2">
+      <Link to="/barajas/pato" className="large-button cursor-pointer" id="game2">
       </Link>
-      <Link to="/varajas/pokemon" className="large-button cursor-pointer" id="game3">
+      <Link to="/barajas/pokemon" className="large-button cursor-pointer" id="game3">
       </Link>
-      <Link to="/varajas/anime" className="large-button cursor-pointer" id="game4">
+      <Link to="/barajas/anime" className="large-button cursor-pointer" id="game4">
       </Link>
-      <Link to="/varajas/RYM" className="large-button cursor-pointer" id="game5">
+      <Link to="/barajas/RYM" className="large-button cursor-pointer" id="game5">
       </Link>
     </div>
   );

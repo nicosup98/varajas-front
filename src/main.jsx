@@ -22,7 +22,7 @@ const router = createBrowserRouter([
         element: <App />,
       },
       {
-        path: "varajas/:tipo",
+        path: "barajas/:tipo",
         element: <Varajas />,
         loader: async ({ params }) => getVaraja(params.tipo),
       },
@@ -37,10 +37,12 @@ const router = createBrowserRouter([
     path: "/signup",
     element: <Signup />,
   },
-])
+], {
+  basename:"/barajas"
+})
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <RouterProvider  router={router} />
   </React.StrictMode>
 )

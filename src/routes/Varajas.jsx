@@ -26,7 +26,7 @@ function Varajas() {
    
    return (
       <>
-         <div className="grid grid-cols-1 justify-items-center sm:grid-cols-2 xl:grid-cols-4 gap-4 h-[99vh] overflow-y-auto my-1">
+         <div className="grid grid-cols-1 gap-1 justify-items-center sm:grid-cols-2 xl:grid-cols-4 gap-4 my-1 h-[100vh]">
             {barajas?.data?.map(b => (
                <Varaja key={b.id} {...b} />
             ))}

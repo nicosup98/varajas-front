@@ -263,16 +263,6 @@ nav button {
   height: 300px;
 }
 
-.button-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 200px; /* Aumenta este valor para mover el botón más abajo */
-}
-
-.button-container h2{
-  font-size: 17px;
-}
-
 .large-button {
   padding: 110px 90px; /* Increase the padding to make the button slightly larger */
   font-size: 18px;
