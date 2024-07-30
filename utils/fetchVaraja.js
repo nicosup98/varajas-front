@@ -1,13 +1,20 @@
+import { redirect } from "react-router-dom";
 
 
 const api = "https://secure-caroline-nicosup98-a3765c62.koyeb.app";
 
 export async function getVaraja(tipo) {
-   const token = sessionStorage.getItem("token");
+   let user = sessionStorage.getItem("user");
+
+   user = JSON.parse(user)
+
+   if(!user) {
+      return redirect("/login")
+   }
 
    const resp = await fetch(`${api}/varaja/user/${tipo}`, {
       headers: {
-         "Authorization": `Bearer ${token}`,
+         "Authorization": `Bearer ${user.token}`,
       },
    });
 
@@ -19,10 +26,16 @@ export async function getVaraja(tipo) {
 
 
 export function genVaraja(tipo){
-   const token = sessionStorage.getItem("token")
+   let user = sessionStorage.getItem("user");
+
+   user = JSON.parse(user)
+
+   if(!user) {
+      return redirect("/login")
+   }
    return fetch(`${api}/varaja/gen/${tipo}`,{
       headers: {
-         "Authorization": `Bearer ${token}`,
+         "Authorization": `Bearer ${user.token}`,
       }
    })
 }

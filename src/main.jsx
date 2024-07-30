@@ -1,6 +1,6 @@
 import React from "react"
 import ReactDOM from "react-dom/client"
-import Root from "./routes/root"
+import Root from "./routes/Root"
 import App from "./routes/App"
 import Login from "./routes/Login"
 import Signup from "./routes/Signup"
@@ -22,19 +22,20 @@ const router = createBrowserRouter([
         element: <App />,
       },
       {
-        path: "login",
-        element: <Login />,
-      },
-      {
-        path: "signup",
-        element: <Signup />,
-      },
-      {
         path: "varajas/:tipo",
         element: <Varajas />,
         loader: async ({ params }) => getVaraja(params.tipo),
       },
     ],
+    
+  },
+  {
+    path: "/login",
+    element: <Login />,
+  },
+  {
+    path: "/signup",
+    element: <Signup />,
   },
 ])
 

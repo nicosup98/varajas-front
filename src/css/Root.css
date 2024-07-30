@@ -1,3 +1,12 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+body{
+  font-family: 'Exo', sans-serif;
+}
+
 .background-animation {
    background: linear-gradient(270deg, #ff00ff, #00ff00, #0000ff); /* Reemplazado el color rojo (#ff0000) por magenta (#ff00ff) */
    background-size: 600% 600%;

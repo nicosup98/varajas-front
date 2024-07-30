@@ -1,13 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Exo:400,700');
 
-*{
-    margin: 0px;
-    padding: 0px;
-}
 
-body{
-    font-family: 'Exo', sans-serif;
-}
 
 .context {
     width: 100%;
@@ -143,7 +136,6 @@ body{
   background-size: cover;
   background-position: center;
   padding: 10px 8%;
-  position: relative;
 }
 
 nav {
@@ -240,21 +232,6 @@ nav button {
   padding: 15px 30px;
 }
 
-.header-content {
-  position: absolute;
-  top: 15%; /* Ajusta este valor según tus necesidades */
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  margin-top: 70px;
-}
-
-.header-content h1 {
-  font-size: 60px;
-  line-height: 70px;
-  font-weight: 600;
-  max-width: 650px;
-}
 
 #game1{
   background-image: url(https://i.pinimg.com/originals/22/bd/ab/22bdabba91b9772d5059fa4e55e36ecf.jpg);
@@ -305,7 +282,10 @@ nav button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  animation: pulse 1s infinite; /* Mueve la animación aquí para que se ejecute siempre */
+}
+
+.large-button:hover {
+  transform: scale(1.05);
 }
 
 .sign-in-button {

@@ -1,4 +1,5 @@
 import axios from "axios"
+
 import { useAuth } from "../hooks/useAuth"
 import AuthLayout from "../components/AuthLayout"
 import { Link, useNavigate } from "react-router-dom"
@@ -34,7 +35,7 @@ function Login() {
         password,
       })
 
-      sessionStorage.setItem("user", JSON.stringify(response.data.user))
+      sessionStorage.setItem("user", JSON.stringify({user:response.data.user, token: response.data.token}))
       navigate("/home")
     } catch (e) {
       alert(e.message)

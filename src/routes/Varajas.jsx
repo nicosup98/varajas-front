@@ -1,10 +1,10 @@
 import { useLoaderData } from "react-router-dom"
 import Varaja from "../components/Varaja"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { genVaraja } from "../../utils/fetchVaraja"
 
 function Varajas() {
-   const [barajas, setBarajas] = useState(useLoaderData())
+   const [barajas, setBarajas] = useState(()=>useLoaderData())
    const [loading, setLoading] = useState(false)
 
    async function obtenerCarta() {
@@ -19,10 +19,14 @@ function Varajas() {
       setLoading(false)
    }
 
+   useEffect(()=>{
+      return ()=> ({data:[],tipo:barajas.tipo})
+   },[barajas])
+
    
    return (
       <>
-         <div className="grid grid-cols-1 justify-items-center sm:grid-cols-2 xl:grid-cols-4 gap-4 h-[99vh] overflow-y-auto">
+         <div className="grid grid-cols-1 justify-items-center sm:grid-cols-2 xl:grid-cols-4 gap-4 h-[99vh] overflow-y-auto my-1">
             {barajas?.data?.map(b => (
                <Varaja key={b.id} {...b} />
             ))}
