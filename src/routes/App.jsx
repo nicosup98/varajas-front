@@ -26,9 +26,7 @@ function App() {
   }, []);
 
   return (
-    <div className="button-container h-[100vh]">
-    </div>
-     
+ <div className="button-container h-[100vh]">
       <Link to="/varajas/perro" className="large-button cursor-pointer" id="game1">
       </Link>
       <Link to="/varajas/pato" className="large-button cursor-pointer" id="game2">
@@ -40,7 +38,6 @@ function App() {
       <Link to="/varajas/RYM" className="large-button cursor-pointer" id="game5">
       </Link>
     </div>
-  );
   );
 }
 
